@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GALIL_BO - Moda Urbana</title>
+    <link rel="stylesheet" href="estilo/estilo.css">
+    <link rel="stylesheet" href="estilo/productos.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header class="encabezado">
+        <div class="contenedor">
+            <div class="seccion-logo">
+                <a href="index.html" class="enlace-logo">
+                    <img src="img/logo.jpg" alt="Logo GALIL_BO" class="logo">
+                </a>
+                <a href="index.html" class="enlace-marca">GALIL_BO</a>
+            </div>
+
+            <!-- Navegación escritorio -->
+            <nav class="navegacion">
+                <ul class="lista-navegacion">
+                    <li><a href="#inicio" class="enlace-nav activo">Inicio</a></li>
+                    <li><a href="#productos" class="enlace-nav">Productos</a></li>
+                    <li><a href="#nosotros" class="enlace-nav">Nosotros</a></li>
+                    <li><a href="#ubicacion" class="enlace-nav">Ubicación</a></li>
+                    <li><a href="#contacto" class="enlace-nav">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <!-- Iconos sociales escritorio -->
+            <div class="iconos-sociales escritorio-sociales">
+                <a href="https://www.instagram.com/galil_bo/" target="_blank" class="enlace-social" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+
+            <!-- Botón menú móvil -->
+            <button class="boton-menu-movil" aria-label="Abrir menú">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Overlay menú móvil -->
+        <div class="overlay-movil"></div>
+
+        <!-- Menú móvil -->
+        <nav class="navegacion-movil">
+            <div class="encabezado-movil">
+                <div class="logo-movil">
+                    <img src="img/logo.jpg" alt="Logo" class="logo-movil-img">
+                </div>
+                <button class="boton-cerrar-movil" aria-label="Cerrar menú">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <ul class="lista-navegacion">
+                <li><a href="#inicio" class="enlace-nav">Inicio</a></li>
+                <li><a href="#productos" class="enlace-nav">Productos</a></li>
+                <li><a href="#nosotros" class="enlace-nav">Nosotros</a></li>
+                <li><a href="#ubicacion" class="enlace-nav">Ubicación</a></li>
+                <li><a href="#contacto" class="enlace-nav">Contacto</a></li>
+            </ul>
+
+            <div class="iconos-sociales movil-sociales">
+                <a href="https://www.instagram.com/galil_bo/" target="_blank" class="enlace-social" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Sección Hero -->
+    <section id="inicio" class="hero-carousel">
+        <div class="slides-container">
+            <!-- Slide 1 -->
+            <div class="slide active" style="background-image: url('portadaindex/img1.jpg');">
+                <div class="slide-content">
+                    <h1 class="slide-title">Estilo que Define</h1>
+                    <p class="slide-subtitle">Cada diseño, una declaración.</p>
+                    <a href="#productos" class="boton-cta">Ver Colecciones</a>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="slide" style="background-image: url('portadaindex/img2.jpg');">
+                <div class="slide-content">
+                    <h1 class="slide-title">Cultura Urbana</h1>
+                    <p class="slide-subtitle">Viste la energía de la calle.</p>
+                    <a href="#productos" class="boton-cta">Ver Colecciones</a>
+                </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="slide" style="background-image: url('portadaindex/img9.jpg');">
+                <div class="slide-content">
+                    <h1 class="slide-title">Calidad Insuperable</h1>
+                    <p class="slide-subtitle">Hecho para durar, diseñado para impresionar.</p>
+                    <a href="#productos" class="boton-cta">Ver Colecciones</a>
+                </div>
+            </div>
+            <!-- Slide 4 -->
+            <div class="slide" style="background-image: url('portadaindex/img4.jpg');">
+                <div class="slide-content">
+                    <h1 class="slide-title">Tu Identidad, Tu Sello</h1>
+                    <p class="slide-subtitle">Prendas que cuentan tu historia.</p>
+                    <a href="#productos" class="boton-cta">Ver Colecciones</a>
+                </div>
+            </div>
+            <!-- Slide 5 -->
+            <div class="slide" style="background-image: url('portadaindex/img10.jpg');">
+                <div class="slide-content">
+                    <h1 class="slide-title">La Calle es Tuya</h1>
+                    <p class="slide-subtitle">Conquista la ciudad con GALIL.</p>
+                    <a href="#productos" class="boton-cta">Ver Colecciones</a>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-nav">
+            <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+            <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="carousel-dots"></div>
+    </section>
+
+    <!-- Sección Productos Destacados -->
+    <section id="productos" class="seccio<n-productos">
+    <div class="contenedor">
+        <h2 class="titulo-seccion">Colecciones</h2>
+        
+        <div class="cuadricula-categorias">
+                <!-- Tarjeta: Poleras -->
+                <a href="paginas/polera.html" class="tarjeta-categoria animate-blur-in">
+                    <div class="contenedor-imagen">
+                        <img src="img/poleras/polera1.jpeg" alt="Colección de Poleras" class="imagen-categoria">
+                    </div>
+                    <div class="overlay-categoria">
+                        <h3>Poleras</h3>
+                        <span class="boton-ver">Ver Colección</span>
+                    </div>
+                </a>
+
+                <!-- Tarjeta: Gorras -->
+                <a href="paginas/gorras.html" class="tarjeta-categoria animate-blur-in">
+                    <div class="contenedor-imagen">
+                        <img src="img/gorras/gorra1.jpeg" alt="Colección de Gorras" class="imagen-categoria">
+                    </div>
+                    <div class="overlay-categoria">
+                        <h3>Gorras</h3>
+                        <span class="boton-ver">Ver Colección</span>
+                    </div>
+                </a>
+
+                <!-- Tarjeta: Chompas -->
+                <a href="paginas/chompa.html" class="tarjeta-categoria animate-blur-in">
+                    <div class="contenedor-imagen">
+                        <img src="img/chompas/chompa1.jpeg" alt="Colección de Chompas" class="imagen-categoria">
+                    </div>
+                    <div class="overlay-categoria">
+                        <h3>Chompas</h3>
+                        <span class="boton-ver">Ver Colección</span>
+                    </div>
+                </a>
+
+                <!-- Tarjeta: Joyas -->
+                <a href="paginas/joya.html" class="tarjeta-categoria animate-blur-in">
+                    <div class="contenedor-imagen">
+                        <img src="img/joyas/joya1.jpeg" alt="Colección de Joyas" class="imagen-categoria">
+                    </div>
+                    <div class="overlay-categoria">
+                        <h3>Joyas</h3>
+                        <span class="boton-ver">Ver Colección</span>
+                    </div>
+                </a>
+
+                <!-- Tarjeta: Bandoleras -->
+                <a href="paginas/bandolera.html" class="tarjeta-categoria animate-blur-in">
+                    <div class="contenedor-imagen">
+                        <img src="img/Bandoleras/Bandolera1.jpeg" alt="Colección de Bandoleras" class="imagen-categoria">
+                    </div>
+                    <div class="overlay-categoria">
+                        <h3>Bandoleras</h3>
+                        <span class="boton-ver">Ver Colección</span>
+                    </div>
+                </a>
+
+                <!-- Tarjeta: Conjuntos -->
+                <a href="paginas/conjunto.html" class="tarjeta-categoria animate-blur-in">
+                    <div class="contenedor-imagen">
+                        <img src="img/Conjuntos/Conjunto1.jpeg" alt="Colección de Conjuntos" class="imagen-categoria">
+                    </div>
+                    <div class="overlay-categoria">
+                        <h3>Conjuntos</h3>
+                        <span class="boton-ver">Ver Colección</span>
+                    </div>
+                </a>
+
+                <!-- Tarjeta: Pantalones -->
+                <a href="paginas/pantalon.html" class="tarjeta-categoria animate-blur-in categoria-oculta">
+                    <div class="contenedor-imagen">
+                        <img src="img/pantalones/pantalon1.jpeg" alt="Colección de Pantalones" class="imagen-categoria">
+                    </div>
+                    <div class="overlay-categoria">
+                        <h3>Pantalones</h3>
+                        <span class="boton-ver">Ver Colección</span>
+                    </div>
+                </a>
+
+        </div>
+
+        <div class="load-more-container" style="text-align: center; margin-top: 40px;">
+            <button id="ver-mas-categorias" class="boton-cta" style="background: black; border-color: black;">Ver Más Colecciones</button>
+        </div>
+    </div>
+</section>
+
+    <!-- Sección Nosotros -->
+    <section id="nosotros" class="seccion-nosotros">
+        <div class="contenedor">
+            <h2 class="titulo-seccion">Nuestra Esencia</h2>
+            <div class="contenido-nosotros">
+                <div class="contenedor-logo-nosotros">
+                    <img src="img/logo.jpg" alt="Logo de GALIL_BO" class="logo-nosotros">
+                </div>
+                <div class="descripcion-tienda ">
+                    <h3 class="animate-tracking-in">El Corazón de la Calle</h3>
+                    <p class="animate-tracking-in">Nacimos de la pasión por la cultura urbana, con la misión de crear más que ropa: creamos identidad. En GALIL_BO, cada prenda es una declaración de principios, un reflejo de la energía y el estilo que define a quienes no temen ser auténticos.</p>
+                    <div class="valores">
+                        <div class="valor">
+                            <i class="fas fa-palette"></i>
+                            <span>Diseños que rompen esquemas.</span>
+                        </div>
+                        <div class="valor">
+                            <i class="fas fa-star"></i>
+                            <span>Calidad que resiste el ritmo de la ciudad.</span>
+                        </div>
+                        <div class="valor">
+                            <i class="fas fa-heart"></i>
+                            <span>Hecho con la pasión que nos une.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Ubicación -->
+    <section id="ubicacion" class="seccion-ubicacion">
+        <div class="contenedor">
+            <h2 class="titulo-seccion">Ubicación</h2>
+            <div class="contenido-ubicacion ">
+                <div class="contenedor-mapa animate-blur-in">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3799.5170089112316!2d-63.1877127!3d-17.7673828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93f1e928cc9072bb%3A0x4ce0ea9085d0d988!2sGalil!5e0!3m2!1ses-419!2sbo!4v1760320372522!5m2!1ses-419!2sbo"
+                        width="100%"
+                        height="400"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy">
+                    </iframe>
+                </div>
+                <div class="info-ubicacion">
+                    <div class="horarios ">
+                        <h3 class="animate-tracking-in-fast"><i class="fas fa-clock"></i> Horarios</h3>
+                        <p class="animate-tracking-in-fast">Lunes a Sábado: 9:00 AM - 6:00 PM</p>
+                        <p class="animate-tracking-in-fast">Domingos: Cerrado</p>
+                    </div>
+                    <div class="envios ">
+                        <h3 class="animate-tracking-in-fast"><i class="fas fa-truck"></i> Envíos</h3>
+                        <p class="animate-tracking-in-fast">Realizamos envíos a todo Bolivia</p>
+                        <p>Tiempo de entrega: 2-5 días hábiles</p>
+                        <p>Envío gratuito en compras mayores a Bs. 200</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contacto" class="seccion-contacto">
+        <div class="contenedor">
+            <h2 class="titulo-seccion">Contacto</h2>
+            <div class="contenido-contacto">
+                <div class="info-contacto">
+                    <h3 class="animate-tracking-in-fast">¿Listo para destacar?</h3>
+                    <p class="animate-tracking-in-fast">Si tienes alguna pregunta, quieres hacer un pedido o simplemente saludar, no dudes en contactarnos. Estamos aquí para ayudarte a definir tu estilo.</p>
+                    <div class="item-contacto">
+                        <i class="fab fa-instagram"></i>
+                        <a href="https://www.instagram.com/galil_bo/" target="_blank">@galil_bo</a>
+                    </div>
+                    <div class="item-contacto">
+                        <i class="fas fa-phone"></i>
+                        <a href="https://wa.me/59162134776" target="_blank">+591 62134776</a>
+                    </div>
+                </div>
+                <div class="formulario-contacto animate-blur-in">
+                    <form id="formulario-contacto">
+                        <input type="text" name="nombre" placeholder="Nombre" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                        <textarea name="mensaje" placeholder="Mensaje" required></textarea>
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="pie-pagina">
+        <div class="contenedor">
+            <div class="contenido-pie">
+                <div class="logo-pie">
+                    <img src="img/logo.jpg" alt="Logo" class="logo-pie-img">
+                    <span>GALIL_BO</span>
+                </div>
+                <div class="enlaces-pie">
+                    <a href="#inicio">Inicio</a>
+                    <a href="#productos">Productos</a>
+                    <a href="#nosotros">Nosotros</a>
+                    <a href="#ubicacion">Ubicación</a>
+                    <a href="#contacto">Contacto</a>
+                </div>
+                <div class="sociales-pie">
+                    <a href="https://www.instagram.com/galil_bo/" class="enlace-social">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="pie-inferior">
+                <p>&copy; 2025 GALIL_BO. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Carrito Lateral -->
+    <div class="cart-panel" id="cart-panel">
+        <div class="cart-header">
+            <h3><i class="fas fa-shopping-cart"></i> Carrito de Compras</h3>
+            <button class="close-cart-btn" id="close-cart-btn">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Los productos se agregarán aquí dinámicamente -->
+            <p class="empty-cart">Tu carrito está vacío</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-summary">
+                <div class="cart-subtotal">
+                    <span>Subtotal:</span>
+                    <span id="cart-subtotal">Bs. 0</span>
+                </div>
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cart-total">Bs. 0</span>
+                </div>
+            </div>
+            <button class="checkout-btn" id="checkout-btn">Proceder al Pago</button>
+        </div>
+    </div>
+
+    <!-- Modal para productos -->
+    <div class="modal" id="polera-modal">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <div class="modal-body">
+                <div class="modal-images-container">
+                    <div class="modal-main-image">
+                        <!-- Imagen principal se carga aquí -->
+                    </div>
+                    <div class="modal-thumbnails">
+                        <!-- Miniaturas se cargan aquí -->
+                    </div>
+                    <div class="modal-nav">
+                        <button class="modal-prev">&larr;</button>
+                        <button class="modal-next">&rarr;</button>
+                    </div>
+                </div>
+                <div class="modal-info">
+                    <h3 id="modal-title">Producto</h3>
+                    <p id="modal-description">Descripción del producto</p>
+
+                    <div class="tarjeta-calidad">
+                        <h4><i class="fas fa-shield-alt"></i> Garantía de Calidad</h4>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Materiales premium de primera calidad</li>
+                            <li><i class="fas fa-check"></i> Diseño exclusivo y único</li>
+                            <li><i class="fas fa-check"></i> Confección artesanal con atención al detalle</li>
+                            <li><i class="fas fa-check"></i> Resistencia y durabilidad garantizada</li>
+                        </ul>
+                    </div>
+
+                    <div class="modal-details">
+                        <div class="detail-item">
+                            <i class="fas fa-tag"></i>
+                            <span>Precio: <span class="modal-price-value">Bs. 0</span></span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-tshirt"></i>
+                            <span>Tallas disponibles: S, M, L, XL</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-truck"></i>
+                            <span>Envío gratuito en compras mayores a Bs. 200</span>
+                        </div>
+                    </div>
+
+                    <div class="size-selector">
+                        <div class="size-label">Selecciona tu talla <span class="required-text" id="required-indicator">*</span></div>
+                        <div class="size-buttons">
+                            <button class="size-btn" data-size="S">S</button>
+                            <button class="size-btn" data-size="M">M</button>
+                            <button class="size-btn" data-size="L">L</button>
+                            <button class="size-btn" data-size="XL">XL</button>
+                        </div>
+                        <div class="size-warning" id="size-warning">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            Por favor selecciona una talla antes de agregar al carrito
+                        </div>
+                    </div>
+
+                    <div class="modal-cta">
+                        <button class="agregar-carrito">
+                            <i class="fas fa-cart-plus"></i>
+                            Agregar al Carrito
+                        </button>
+                        <a class="cta-button" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                            Pedir por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botón flotante del carrito -->
+    <button class="cart-float-btn" id="cart-float-btn">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-count" id="cart-count">0</span>
+    </button>
+
+    <script src="js/dinamica.js"></script>
+    <script src="js/polera.js"></script>
+
+    <script>
+        // Inicializar carrito al cargar la página
+        document.addEventListener('DOMContentLoaded', function() {
+            updateCart();
+        });
+
+        // Variables del carrito
+        let cart = JSON.parse(localStorage.getItem('galil_cart')) || [];
+
+        // Función para actualizar el carrito visualmente
+        function updateCart() {
+            const cartItemsContainer = document.getElementById('cart-items');
+            const cartSubtotal = document.getElementById('cart-subtotal');
+            const cartTotal = document.getElementById('cart-total');
+            const cartCount = document.getElementById('cart-count');
+
+            cartItemsContainer.innerHTML = '';
+            let subtotal = 0;
+
+            if (cart.length === 0) {
+                cartItemsContainer.innerHTML = '<p class="empty-cart">Tu carrito está vacío</p>';
+            } else {
+                cart.forEach((item, index) => {
+                    subtotal += item.price * item.quantity;
+
+                    const div = document.createElement('div');
+                    div.classList.add('cart-item');
+                    div.innerHTML = `
+                        <img src="${item.image}" alt="${item.name}" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjYwIiBoZWlnaHQ9IjYwIiBmaWxsPSIjRjBGMEYwIi8+CjxwYXRoIGQ9Ik0zMCAxNUgzMFYzMEgzMFYxNVoiIGZpbGw9IiM5OTk5OTkiLz4KPHBhdGggZD0iTTMwIDI1SDE1VjMwSDE1VjI1WiIgZmlsbD0iIzk5OTk5OSIvc3Ryb2tlPSIjOTk5IiBzdHJva2Utd2lkdGg9IjIiLz4KPC9zdmc+'">
+                        <div class="cart-item-info">
+                            <p class="cart-item-title">${item.name}</p>
+                            <p class="cart-item-color">Talla: ${item.size}</p>
+                            <div style="display:flex;align-items:center;gap:8px;">
+                                <button class="qty-btn" onclick="changeQuantity(${index}, -1)">-</button>
+                                <span>${item.quantity}</span>
+                                <button class="qty-btn" onclick="changeQuantity(${index}, 1)">+</button>
+                            </div>
+                            <p class="cart-item-price">Bs ${(item.price * item.quantity).toFixed(2)}</p>
+                        </div>
+                        <i class="fas fa-trash remove-item-btn" onclick="removeFromCart(${index})"></i>
+                    `;
+                    cartItemsContainer.appendChild(div);
+                });
+            }
+
+            cartSubtotal.textContent = `Bs ${subtotal.toFixed(2)}`;
+            cartTotal.textContent = `Bs ${subtotal.toFixed(2)}`;
+            cartCount.textContent = cart.reduce((sum, item) => sum + item.quantity, 0);
+
+            // Guardar en localStorage
+            localStorage.setItem('galil_cart', JSON.stringify(cart));
+        }
+
+        // Cambiar cantidad de productos
+        function changeQuantity(index, delta) {
+            cart[index].quantity += delta;
+            if (cart[index].quantity <= 0) cart.splice(index, 1);
+            updateCart();
+        }
+
+        // Eliminar producto del carrito
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCart();
+        }
+
+        // Agregar producto al carrito
+        function addToCart(product) {
+            const productId = `${product.name}-${product.size}-${product.image}`;
+            const existing = cart.find(p => `${p.name}-${p.size}-${p.image}` === productId);
+            if (existing) {
+                existing.quantity += 1;
+            } else {
+                cart.push({ ...product, quantity: 1 });
+            }
+            updateCart();
+            document.getElementById('cart-panel').classList.add('active');
+        }
+
+        // Eventos del carrito
+        document.getElementById('cart-float-btn').addEventListener('click', () => {
+            document.getElementById('cart-panel').classList.add('active');
+        });
+
+        document.getElementById('close-cart-btn').addEventListener('click', () => {
+            document.getElementById('cart-panel').classList.remove('active');
+        });
+
+        document.getElementById('checkout-btn').addEventListener('click', () => {
+            window.location.href = "paginas/formulario.html";
+        });
+    </script>
+</body>
+</html>

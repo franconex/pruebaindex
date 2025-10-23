@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gorras - GALIL_BO</title>
+    <link rel="stylesheet" href="../estilo/estilo.css">
+    <link rel="stylesheet" href="../estilo/productos.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo-section">
+                <a href="../index.html" class="logo-link">
+                    <img src="../img/logo.jpg" alt="Logo" class="logo">
+                </a>
+                <a href="../index.html" class="brand-link">GALIL_BO</a>
+            </div>
+
+            <!-- Menú de escritorio -->
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="../index.html" class="nav-link">Inicio</a></li>
+                    <li><a href="polera.html" class="nav-link">Poleras</a></li>
+                    <li><a href="gorras.html" class="nav-link active">Gorras</a></li>
+                    <li><a href="chompa.html" class="nav-link">Chompas</a></li>
+                    <li><a href="joya.html" class="nav-link">Joyas</a></li>
+                    <li><a href="bandolera.html" class="nav-link">Bandoleras</a></li>
+                    <li><a href="conjunto.html" class="nav-link">Conjuntos</a></li>
+                    <li><a href="pantalones.html" class="nav-link">Pantalones</a></li>
+                </ul>
+            </nav>
+
+            <!-- Botón hamburguesa -->
+            <button class="boton-menu-movil" aria-label="Abrir menú">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Overlay -->
+        <div class="overlay-movil"></div>
+
+        <!-- Menú móvil -->
+        <nav class="navegacion-movil">
+            <div class="encabezado-movil">
+                <div class="logo-movil">
+                    <img src="../img/logo.jpg" alt="Logo" class="logo-movil-img">
+                </div>
+                <button class="boton-cerrar-movil" aria-label="Cerrar menú">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <ul class="lista-navegacion">
+                <li><a href="../index.html" class="nav-link">Inicio</a></li>
+                <li><a href="polera.html" class="nav-link">Poleras</a></li>
+                <li><a href="gorras.html" class="nav-link active">Gorras</a></li>
+                <li><a href="chompa.html" class="nav-link">Chompas</a></li>
+                <li><a href="joya.html" class="nav-link">Joyas</a></li>
+                <li><a href="bandolera.html" class="nav-link">Bandoleras</a></li>
+                <li><a href="conjunto.html" class="nav-link">Conjuntos</a></li>
+                <li><a href="pantalones.html" class="nav-link">Pantalones</a></li>
+            </ul>
+            <div class="iconos-sociales movil-sociales">
+                <a href="https://www.instagram.com/galil_bo/" target="_blank" class="enlace-social" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- El resto de tu HTML se mantiene igual -->
+    <main class="main-content">
+        <!-- Hero Section with Full Screen Video -->
+        <section class="gorras-header-section">
+            <div class="gorras-header-videos">
+                <video src="../img/gorras/portadagorra1 - Trim.mp4" autoplay loop muted playsinline class="header-video"></video>
+            </div>
+            <div class="gorras-header-content">
+                <h1 class="galil-title">galil_bo</h1>
+                <p class="gorras-subtitle">Completa tu look con nuestras gorras</p>
+                <a href="#gorras-grid" class="gorras-cta-button">Explorar Diseños</a>
+            </div>
+        </section>
+
+        <!-- Gorras Collection -->
+        <section class="gorras-collection">
+            <div class="container">
+                <h2 class="collection-title animate-on-scroll">Nuestras Gorras</h2>
+                <div class="gorras-grid" id="gorras-grid">
+                    <!-- Gorras will be loaded here -->
+                </div>
+                <div class="load-more-container animate-on-scroll">
+                    <button id="load-more-btn" class="load-more-btn">Cargar Más Gorras</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Modal -->
+        <div id="gorra-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div class="modal-body">
+                    <div class="modal-images-container">
+                        <div class="modal-main-image">
+                            <!-- Main image will be loaded here -->
+                        </div>
+                        <div class="modal-thumbnails">
+                            <!-- Thumbnails will be loaded here -->
+                        </div>
+                    </div>
+                    <div class="modal-info">
+                        <h3 id="modal-title"></h3>
+                        <p id="modal-description"></p>
+
+                        <!-- Tarjeta de Calidad -->
+                        <div class="tarjeta-calidad">
+                            <h4><i class="fas fa-gem"></i> Calidad Premium</h4>
+                            <ul>
+                                <li><i class="fas fa-hat-cowboy-side"></i> <strong>Materiales Resistentes:</strong> Construcción duradera para el uso diario.</li>
+                                <li><i class="fas fa-print"></i> <strong>Bordado de Alta Definición:</strong> Diseños nítidos y con relieve que destacan.</li>
+                            </ul>
+                        </div>
+
+                        <div class="modal-details">
+                            <div class="detail-item">
+                                <i class="fas fa-dollar-sign"></i>
+                                <span class="modal-price-value">250 Bs</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>WhatsApp: 62134776</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-truck"></i>
+                                <span>Envíos en Santa Cruz</span>
+                            </div>
+                        </div>
+                        <div class="modal-cta">
+                            <button class="agregar-carrito" id="btn-agregar-carrito">
+                              <i class="fas fa-cart-plus"></i> Agregar al carrito
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <img src="../img/logo.jpg" alt="Logo" class="footer-logo-img">
+                        <span>GALIL_BO</span>
+                    </div>
+                    <div class="footer-links">
+                        <a href="../index.html">Inicio</a>
+                        <a href="polera.html">Poleras</a>
+                        <a href="gorras.html">Gorras</a>
+                        <a href="chompa.html">Chompas</a>
+                        <a href="joya.html">Joyas</a>
+                        <a href="bandolera.html">Bandoleras</a>
+                        <a href="conjunto.html">Conjuntos</a>
+                        <a href="pantalones.html">Pantalones</a>
+                    </div>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/galil_bo/" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 galil_bo. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Carrito Lateral -->
+        <div id="cart-panel" class="cart-panel">
+            <div class="cart-header">
+                <h3>Carrito de Compras</h3>
+                <button id="close-cart" class="close-cart-btn">&times;</button>
+            </div>
+            <div id="cart-items" class="cart-items">
+                <!-- Items del carrito se cargarán aquí -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-summary">
+                    <p>Subtotal: <span id="cart-subtotal">Bs 0.00</span></p>
+                    <p>Total: <span id="cart-total">Bs 0.00</span></p>
+                </div>
+                <button id="checkout-btn" class="checkout-btn">Proceder al Pago</button>
+            </div>
+        </div>
+
+        <!-- Botón flotante del carrito -->
+        <button id="cart-button" class="cart-float-btn">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="cart-count" class="cart-count">0</span>
+        </button>
+
+        <script src="../js/gorras.js"></script>
+    </main>
+</body>
+</html>
