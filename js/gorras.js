@@ -12,27 +12,20 @@ for (let i = 1; i <= TOTAL_GORRAS; i++) {
         price = 100; // Precio para las gorras 6 a 10
     }
 
-    // Array con los números de las gorras que usan la extensión .jpg
-    const jpgCaps = [6, 7, 8, 9, 10];
-
-    // Por defecto, la extensión es .jpeg
-    let extension = 'jpeg';
-
-    // Si el número de la gorra actual está en el array, se usa .jpg
-    if (jpgCaps.includes(i)) {
-        extension = 'jpg';
+    // Determinar las imágenes disponibles para cada gorra
+    let images = [];
+    if (i >= 1 && i <= 5) {
+        // Gorras 1-5 usan .jpeg
+        images = [`gorra${i}.jpeg`, `gorra${i}.1.jpeg`, `gorra${i}.1.1.jpeg`, `gorra${i}.1.1.1.jpeg`];
+    } else if (i >= 6 && i <= 10) {
+        // Gorras 6-10 usan .jpg
+        images = [`gorra${i}.jpg`, `gorra${i}.1.jpg`, `gorra${i}.1.1.jpg`, `gorra${i}.1.1.1.jpg`];
     }
 
     gorras.push({
         id: `gorra${i}`,
         name: `Gorra ${i}`, // Nombre generado automáticamente
-        // Estructura de imágenes actualizada
-        images: [
-            `gorra${i}.${extension}`,
-            `gorra${i}.1.${extension}`,
-            `gorra${i}.1.1.${extension}`,
-            `gorra${i}.1.1.1.${extension}`
-        ],
+        images: images,
         price: price
     });
 }
@@ -378,11 +371,11 @@ function openModal(gorra) {
     // Usar el array de imágenes ya definido para la gorra, que tiene la estructura correcta.
     const orderedImages = gorra.images;
 
-    // Crear indicador de múltiples imágenes para móvil
+    // Crear indicador de imagen actual para móvil (como Instagram)
     if (orderedImages.length > 1) {
         const mobileIndicator = document.createElement('div');
         mobileIndicator.className = 'modal-image-indicator-mobile';
-        mobileIndicator.innerHTML = `<i class="fas fa-images"></i> ${orderedImages.length}`;
+        mobileIndicator.innerHTML = `1/${orderedImages.length}`;
         modalMainImageContainer.appendChild(mobileIndicator);
     }
 
@@ -480,10 +473,10 @@ function changeImage(index) {
         console.log(`Cambiando a imagen: ${imageSrc} (índice: ${index})`);
     }
 
-    // Actualizar indicador de imagen
-    const imageIndicator = document.querySelector('.modal-image-indicator');
-    if (imageIndicator) {
-        imageIndicator.textContent = `${index + 1} / ${currentGorraImages.length}`;
+    // Actualizar indicador de imagen actual para móvil (como Instagram)
+    const imageIndicator = document.querySelector('.modal-image-indicator-mobile');
+    if (imageIndicator && currentGorraImages.length > 1) {
+        imageIndicator.innerHTML = `${index + 1}/${currentGorraImages.length}`;
     }
 
     // Actualizar thumbnails activos (desktop)
@@ -495,8 +488,6 @@ function changeImage(index) {
             thumbnail.classList.remove('active');
         }
     });
-
-    // No hay puntos para actualizar ya que se eliminaron
 }
 
 // Variables globales para swipe gestures

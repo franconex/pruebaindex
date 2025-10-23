@@ -26,15 +26,18 @@ for (let i = 1; i <= TOTAL_PANTALONES; i++) {
             price = 300; // Precio por defecto
     }
 
+    // Determinar las imágenes disponibles para cada pantalón
+    // Los pantalones tienen 3 imágenes cada uno
+    let images = [
+        `pantalon${i}.jpeg`,       // Imagen principal
+        `pantalon${i}.1.jpeg`,     // Segunda imagen
+        `pantalon${i}.1.1.jpeg`    // Tercera imagen
+    ];
+
     pantalones.push({
         id: `pantalon${i}`,
         name: nombresPantalones[i - 1] || `Pantalón ${i}`,
-        images: [
-            `pantalon${i}.jpeg`,       // Imagen principal
-            `pantalon${i}.1.jpeg`,     // Segunda imagen
-            `pantalon${i}.1.1.jpeg`,   // Tercera imagen
-            `pantalon${i}.1.1.1.jpeg`  // Cuarta imagen
-        ],
+        images: images,
         price: price
     });
 }
@@ -370,8 +373,22 @@ function openModal(pantalon) {
     modalContent.classList.remove('modal-open-anim');
 
     // Limpiar contenedores
-    modalMainImageContainer.innerHTML = '<img class="modal-image" alt="">';
+    modalMainImageContainer.innerHTML = '';
     modalThumbnailsContainer.innerHTML = '';
+
+    // Crear indicador de imagen actual para móvil (como Instagram)
+    if (currentPantalonImages.length > 1) {
+        const mobileIndicator = document.createElement('div');
+        mobileIndicator.className = 'modal-image-indicator-mobile';
+        mobileIndicator.innerHTML = `1/${currentPantalonImages.length}`;
+        modalMainImageContainer.appendChild(mobileIndicator);
+    }
+
+    // Crear imagen principal
+    const mainImage = document.createElement('img');
+    mainImage.className = 'modal-image';
+    mainImage.alt = pantalon.name;
+    modalMainImageContainer.appendChild(mainImage);
 
     currentPantalonImages.forEach((imageName, index) => {
         const thumbnail = document.createElement('img');
@@ -450,10 +467,16 @@ function changeImage(index) {
         console.log(`Cambiando a imagen: ${imageSrc} (índice: ${currentImageIndex})`);
     }
 
+    // Actualizar indicador de imagen actual para móvil (como Instagram)
+    const imageIndicator = document.querySelector('.modal-image-indicator-mobile');
+    if (imageIndicator && currentPantalonImages.length > 1) {
+        imageIndicator.innerHTML = `${currentImageIndex + 1}/${currentPantalonImages.length}`;
+    }
+
     // Actualizar thumbnails activos
     const thumbnails = document.querySelectorAll('.modal-thumbnail');
     thumbnails.forEach((thumbnail, i) => {
-        if (i === index) {
+        if (i === currentImageIndex) {
             thumbnail.classList.add('active');
         } else {
             thumbnail.classList.remove('active');

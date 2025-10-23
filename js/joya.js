@@ -16,13 +16,17 @@ for (let i = 1; i <= TOTAL_JOYAS; i++) {
     }
    
 
+    // Determinar las imágenes disponibles para cada joya
+    let images = [];
+    if (i >= 1 && i <= 6) {
+        // Las joyas solo tienen una imagen cada una
+        images = [`joya${i}.jpeg`];
+    }
+
     joyas.push({
         id: `joya${i}`,
         name: `Joya ${i}`, // Nombre generado automáticamente
-        // Estructura de imágenes
-        images: [
-            `joya${i}.jpeg`
-        ],
+        images: images,
         price: price
     });
 }
@@ -369,6 +373,14 @@ function openModal(joya) {
     // Usar el array de imágenes individual de la joya
     const orderedImages = joya.images;
 
+    // Crear indicador de imagen actual para móvil (como Instagram)
+    if (orderedImages.length > 1) {
+        const mobileIndicator = document.createElement('div');
+        mobileIndicator.className = 'modal-image-indicator-mobile';
+        mobileIndicator.innerHTML = `1/${orderedImages.length}`;
+        modalMainImageContainer.appendChild(mobileIndicator);
+    }
+
     orderedImages.forEach((imageSrc, index) => {
         const thumbnail = document.createElement('img');
         thumbnail.src = `../img/joyas/${imageSrc}`;
@@ -444,6 +456,12 @@ function changeImage(index) {
         mainImage.src = `../img/joyas/${imageSrc}`;
         mainImage.alt = `${currentJoya.name} - Vista ${index + 1}`;
         console.log(`Cambiando a imagen: ${imageSrc} (índice: ${index})`);
+    }
+
+    // Actualizar indicador de imagen actual para móvil (como Instagram)
+    const imageIndicator = document.querySelector('.modal-image-indicator-mobile');
+    if (imageIndicator && currentJoyaImages.length > 1) {
+        imageIndicator.innerHTML = `${index + 1}/${currentJoyaImages.length}`;
     }
 
     // Actualizar thumbnails activos

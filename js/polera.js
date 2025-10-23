@@ -25,10 +25,16 @@ for (let i = 1; i <= 48; i++) {
         default: price = 250;
     }
 
+    // Determinar las imágenes disponibles para cada polera
+    // Las poleras tienen 3 o 4 imágenes dependiendo del producto
+    let images = [`Polera${i}.jpeg`, `Polera${i}.1.jpeg`, `Polera${i}.2.jpeg`];
+    // Solo agregar la cuarta imagen si existe (algunas poleras tienen solo 3)
+    // El error handling se encargará de remover las que no existen
+
     poleras.push({
         id: `polera${i}`,
         name: nombresPoleras[i - 1] || `Diseño Exclusivo ${i}`,
-        images: [`polera${i}.jpeg`, `polera${i}.1.jpeg`, `polera${i}.2.jpeg`, `polera${i}.3.jpeg`],
+        images: images,
         price: price
     });
 }
@@ -380,6 +386,14 @@ function openModal(polera) {
     // Usar el array de imágenes individual de la polera
     const orderedImages = polera.images;
 
+    // Crear indicador de imagen actual para móvil (como Instagram)
+    if (orderedImages.length > 1) {
+        const mobileIndicator = document.createElement('div');
+        mobileIndicator.className = 'modal-image-indicator-mobile';
+        mobileIndicator.innerHTML = `1/${orderedImages.length}`;
+        modalMainImageContainer.appendChild(mobileIndicator);
+    }
+
     orderedImages.forEach((imageSrc, index) => {
         const thumbnail = document.createElement('img');
         thumbnail.src = `../img/Poleras/${imageSrc}`;
@@ -459,6 +473,12 @@ function changeImage(index) {
         mainImage.src = `../img/Poleras/${imageSrc}`;
         mainImage.alt = `${currentPolera.name} - Vista ${index + 1}`;
         console.log(`Cambiando a imagen: ${imageSrc} (índice: ${index})`);
+    }
+
+    // Actualizar indicador de imagen actual para móvil (como Instagram)
+    const imageIndicator = document.querySelector('.modal-image-indicator-mobile');
+    if (imageIndicator && currentPoleraImages.length > 1) {
+        imageIndicator.innerHTML = `${index + 1}/${currentPoleraImages.length}`;
     }
 
     // Actualizar thumbnails activos
