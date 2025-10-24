@@ -218,7 +218,7 @@ function createBandoleraCard(bandolera) {
     card.setAttribute('data-id', bandolera.id);
 
     const img = document.createElement('img');
-    img.src = `../img/Bandoleras/${bandolera.images[0]}`;
+    img.src = `../img/bandoleras/${bandolera.images[0]}`;
     img.alt = bandolera.name;
     img.loading = 'lazy';
     img.className = 'bandolera-image';
@@ -451,7 +451,7 @@ function changeImage(index) {
 
     const mainImage = document.querySelector('.modal-main-image .modal-image');
     if (mainImage) {
-        mainImage.src = `../img/Bandoleras/${imageSrc}`;
+        mainImage.src = `../img/bandoleras/${imageSrc}`;
         mainImage.alt = `${currentBandolera.name} - Vista ${index + 1}`;
         console.log(`Cambiando a imagen: ${imageSrc} (índice: ${index})`);
     }
@@ -545,7 +545,7 @@ function setupSwipeGestures(element) {
 function setupImageErrorHandling() {
     document.addEventListener('error', function(e) {
         if (e.target.tagName === 'IMG') {
-            const img = e.target;
+            const img = e.target; // No es necesario cambiar aquí, ya que el path es 'bandoleras/' (minúscula)
             if (img.src.includes('Bandoleras/')) {
                 console.warn(`⚠️ Error cargando imagen: ${img.src}`);
                 img.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjIwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNGMEYwRjAiLz4KPHBhdGggZD0iTTc1IDUwSDEyNVYxNTBINzVWNTBaIiBmaWxsPSIjRDhEOEQ4Ii8+CjxwYXRoIGQ9Ik04MCA2MEgxMjBWMTRDSA4MFY2MFoiIGZpbGw9IiNGRkZGRkYiLz4KPHBhdGggZD0iTTEwMCAxMTBWOUIxMDAgMTMwVjExME0xMDAgMTMwVjExME05MCAxMjBIMTAwTTEwMCAxMjBIMTEwIiBzdHJva2U9IiM5OTkiIHN0cm9rZS13aWR0aD0iMiIvPgo8L3N2Zz4=';

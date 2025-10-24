@@ -718,7 +718,7 @@ document.addEventListener('click', (e) => {
 // ===== MANEJO DE ERRORES DE IMAGEN =====
 function setupImageErrorHandling() {
     document.addEventListener('error', function(e) {
-        if (e.target.tagName === 'IMG' && e.target.src.includes('/pantalones/')) {
+        if (e.target.tagName === 'IMG' && e.target.src.includes('/pantalones/')) { // No es necesario cambiar aquí, ya que el path es 'pantalones/' (minúscula)
             console.warn(`⚠️ Error cargando imagen: ${e.target.src}`);
             e.target.style.display = 'none'; // Oculta la imagen rota
         }
